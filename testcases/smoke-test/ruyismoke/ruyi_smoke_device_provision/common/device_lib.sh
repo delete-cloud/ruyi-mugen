@@ -84,9 +84,12 @@ function recursion_run() {
         #touch /tmp/ruyi_device/test
         #recursion_run "$now_exec\n/tmp/ruyi_device/test" 1
         recursion_run "$now_exec" "y"
-        ret=$(expr $ret + $?)
-        return $ret;
-        return 0
+        return $?;
+    fi
+    grep "NOTE: You have to consult the official documentation" /tmp/ruyi_device/output
+    if [[ $? -eq 0 ]]; then
+        recursion_run "$now_exec" "1"
+        return $?
     fi
     grep 'Proceed' /tmp/ruyi_device/output
     if [[ $? -eq 0 ]]; then
