@@ -56,13 +56,12 @@ pipeline {
 
     stages {
         stage('ruyi-test') {
-            matrix {
-                agent { label x86_64 }
+                agent { label 'x86_64' }
 
                 stages {
                     stage('mugen') {
                         steps {
-                            echo "Start mugen test on ${DIRSTO}"
+                            echo "Start mugen device test"
                             mugen_install()
                             mugen_run()
                             mugen_report()
@@ -76,7 +75,6 @@ pipeline {
                         cleanWs()
                     }
                 }
-            }
         }
     }
 }
