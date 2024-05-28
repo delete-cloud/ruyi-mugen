@@ -57,14 +57,8 @@ pipeline {
     stages {
         stage('ruyi-test') {
             matrix {
-                agent { label DISTROMAP["${DIRSTO}"]['label'] }
-                axes {
-                    axis {
-                        name "DIRSTO"
-                        values 'archlinux-x86_64'
-                    }
-                }
-                
+                agent { label x86_64 }
+
                 stages {
                     stage('mugen') {
                         steps {
