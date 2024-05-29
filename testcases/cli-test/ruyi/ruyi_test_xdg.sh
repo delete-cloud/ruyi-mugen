@@ -54,6 +54,8 @@ function run_test() {
 
     ruyi news list
     CHECK_RESULT $? 0 0 "Check ruyi news list failed"
+    ruyi news read 1
+    CHECK_RESULT $? 0 0 "Check ruyi news read failed"
 
     pkgnames=$(ruyi list | grep -e "^* toolchain" | cut -d'/' -f 2)
     for p in $pkgnames; do
