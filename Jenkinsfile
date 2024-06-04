@@ -3,6 +3,8 @@ DISTROMAP = [
     'oE2309-riscv64': ['label': 'openEuler2309 && riscv64'],
     'ubuntu2204-x86_64': ['label': 'ubuntu2204 && x86_64'],
     'ubuntu2204-riscv64': ['label': 'ubuntu2204 && riscv64'],
+    'ubuntu2404-x86_64': ['label': 'ubuntu2404 && x86_64'],
+    'ubuntu2404-riscv64': ['label': 'ubuntu2404 && riscv64'],
     'fedora38-x86_64': ['label': 'fedora38 && x86_64'],
     'fedora38-riscv64': ['label': 'fedora38 && riscv64'],
     'revyos-riscv64': ['label': 'revyos && riscv64'],
@@ -72,7 +74,7 @@ pipeline {
                 axes {
                     axis {
                         name "DIRSTO"
-                        values "ubuntu2204-x86_64", "ubuntu2204-riscv64", "revyos-riscv64", 'debian12-x86_64', 'debian12-aarch64', 'debiansid-riscv64', 'openkylin-x86_64', 'openkylin-riscv64'
+                        values "ubuntu2204-x86_64", "ubuntu2204-riscv64", "ubuntu2404-x86_64", "ubuntu2404-riscv64", "revyos-riscv64", 'debian12-x86_64', 'debian12-aarch64', 'debiansid-riscv64', 'openkylin-x86_64', 'openkylin-riscv64'
                     }
                 }
                 
