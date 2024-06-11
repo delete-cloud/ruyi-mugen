@@ -118,7 +118,14 @@ install_ruyi() {
 
 	chmod +x ruyi
 	sudo ln -s $(realpath ruyi) /usr/bin/ruyi
-	# remove_ruyi_data
+	remove_ruyi_data
+
+	mkdir -p "$(get_ruyi_config_dir)"
+	cat >"$(get_ruyi_config_dir)/config.toml" <<EOF
+[repo]
+remote = "https://gitee.com/ruyisdk/packages-index.git"
+branch = "main"
+EOF
 }
 
 remove_ruyi() {
