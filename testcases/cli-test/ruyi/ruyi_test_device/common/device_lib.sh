@@ -59,6 +59,12 @@ function recursion_run() {
         # failed to download
         ( ! grep "failed to fetch distfile" /tmp/ruyi_device/output_e ) && [ $happy = n ] && echo -e "\nHappy hacking! 0 1" >> /tmp/ruyi_device/output
         rm -f /tmp/ruyi_device/output_e
+    elif [[ "$end_exec" == "yn" ]]; then
+        local link
+        echo -e "$now_exec" | ruyi device provision 2>&1 | tee > /tmp/ruyi_device/output
+        link=$(grep Link: /tmp/ruyi_device/output | sed "s/Link: //")
+        curl $link | grep "httpStatus" | grep 404
+        echo -e "\nHappy hacking! 1 $?" >> /tmp/ruyi_device/output
     elif [ ! -z "$end_exec" ] && [ "$end_exec" != "0" ]; then
         local ret
         echo -e $now_exec | ruyi device provision 2>&1 > /tmp/ruyi_device/output
@@ -105,7 +111,7 @@ function recursion_run() {
     fi
     grep "NOTE: You have to consult the official documentation" /tmp/ruyi_device/output
     if [[ $? -eq 0 ]]; then
-        recursion_run "$now_exec" "1"
+        recursion_run "$now_exec" "yn"
         return $?
     fi
     grep 'Proceed' /tmp/ruyi_device/output
