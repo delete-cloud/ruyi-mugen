@@ -1,6 +1,8 @@
 DISTROMAP = [
     'oE2309-x86_64': ['label': 'openEuler2309 && x86_64'],
     'oE2309-riscv64': ['label': 'openEuler2309 && riscv64'],
+    'oE2403-x86_64': ['label': 'openEuler2403 && x86_64'],
+    'oE2403-riscv64': ['label': 'openEuler2403 && riscv64'],
     'ubuntu2204-x86_64': ['label': 'ubuntu2204 && x86_64'],
     'ubuntu2204-riscv64': ['label': 'ubuntu2204 && riscv64'],
     'ubuntu2404-x86_64': ['label': 'ubuntu2404 && x86_64'],
@@ -134,7 +136,7 @@ pipeline {
                 axes {
                     axis {
                         name "DIRSTO"
-                        values "oE2309-x86_64", "fedora38-x86_64", "fedora38-riscv64", 'oE2309-riscv64'
+                        values "oE2309-x86_64", "fedora38-x86_64", "fedora38-riscv64", 'oE2309-riscv64', "oE2403-x86_64", 'oE2403-riscv64'
                     }
                 }
 
