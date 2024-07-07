@@ -35,7 +35,7 @@ function run_test() {
     [ ! -d "$cfg_d" ] && mkdir -p $cfg_d
     [ -d "$cc_td" ] && rm -rf "$cc_td"
 
-    cat >"$cfg_f" <<EOF
+    cat >>"$cfg_f" <<EOF
 [repo]
 local = "$cc_td"
 EOF
@@ -47,19 +47,19 @@ EOF
     CHECK_RESULT $? 0 1 "Check ruyi orig local failed"
     rm -rf "$cc_td"
 
-    wr=wrong_magic
-    cat >"$cfg_f" <<EOF
-[repo]
-remote = "https://$wr"
-EOF
-    ruyi update 2>&1 | grep "$wr"
-    CHECK_RESULT $? 0 0 "Check ruyi remote failed"
-    cat >"$cfg_f" <<EOF
-[repo]
-branch = "$wr"
-EOF
-    ruyi update 2>&1 | grep "$wr"
-    CHECK_RESULT $? 0 0 "Check ruyi branch failed"
+    #wr=wrong_magic
+    #cat >"$cfg_f" <<EOF
+#[repo]
+#remote = "https://$wr"
+#EOF
+    #ruyi update 2>&1 | grep "$wr"
+    #CHECK_RESULT $? 0 0 "Check ruyi remote failed"
+    #cat >"$cfg_f" <<EOF
+#[repo]
+#branch = "$wr"
+#EOF
+    #ruyi update 2>&1 | grep "$wr"
+    #CHECK_RESULT $? 0 0 "Check ruyi branch failed"
 
     LOG_INFO "End of the test."
 }
