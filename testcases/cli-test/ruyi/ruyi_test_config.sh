@@ -34,9 +34,9 @@ function run_test() {
 
     [ ! -d "$cfg_d" ] && mkdir -p $cfg_d
     [ -d "$cc_td" ] && rm -rf "$cc_td"
+    cp "$cfg_f" "${cfg_f}.old"
 
     cat >>"$cfg_f" <<EOF
-[repo]
 local = "$cc_td"
 EOF
     ruyi update
@@ -47,19 +47,19 @@ EOF
     CHECK_RESULT $? 0 1 "Check ruyi orig local failed"
     rm -rf "$cc_td"
 
-    #wr=wrong_magic
-    #cat >"$cfg_f" <<EOF
-#[repo]
-#remote = "https://$wr"
-#EOF
-    #ruyi update 2>&1 | grep "$wr"
-    #CHECK_RESULT $? 0 0 "Check ruyi remote failed"
-    #cat >"$cfg_f" <<EOF
-#[repo]
-#branch = "$wr"
-#EOF
-    #ruyi update 2>&1 | grep "$wr"
-    #CHECK_RESULT $? 0 0 "Check ruyi branch failed"
+    wr=wrong_magic
+    cp "${cfg_f}.old" "$cfg_f"
+    sed -i "s|remote.*|remote = \"https://$wr\"|" $cfg_f
+    ruyi update 2>&1 | grep "$wr"
+    CHECK_RESULT $? 0 0 "Check ruyi remote failed"
+
+    cp "${cfg_f}.old" "$cfg_f"
+    sed -i "s|branch.*|branch = \"$wr\"|" $cfg_f
+    ruyi update 2>&1 | grep "$wr"
+    CHECK_RESULT $? 0 0 "Check ruyi branch failed"
+
+    cp "${cfg_f}.old" "$cfg_f"
+    rm -f "${cfg_f}.old"
 
     LOG_INFO "End of the test."
 }
