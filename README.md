@@ -1,27 +1,33 @@
 # mugen
 
-[![Build Status](https://jenkins.inuyasha.love/job/ruyi-mugen/job/ruyisdk/badge/icon)](https://jenkins.inuyasha.love/job/ruyi-mugen/job/ruyisdk/)
-
 RuyiSDK mugen 测试分支
 
 测试平台：
 
-+ x86\_64 Debian 12
-+ x86\_64 Fedora 38
-+ x86\_64 Ubuntu 22.04 LTS
-+ x86\_64 openEuler 23.09
-+ x86\_64 Archlinux
-+ x86\_64 Gentoo
-+ x86\_64 openKylin 1.0.2
-+ riscv64 Debian sid
-+ riscv64 Fedora 38
-+ riscv64 Ubuntu 22.04 LTS
-+ riscv64 RevyOS 20231210
-+ riscv64 openEuler 23.09
-+ riscv64 Archlinux
-+ riscv64 Gentoo
-+ riscv64 openKylin 1.0.1
-+ aarch64 Debian 12
++ x86\_64 Debian 12 [![Build Status](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/debian12-x86_64/badge/icon)](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/debian12-x86_64/)
++ x86\_64 Fedora 38 [![Build Status](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/fedora38-x86_64/badge/icon)](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/fedora38-x86_64/)
++ x86\_64 Ubuntu 22.04 LTS [![Build Status](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/ubuntu2204-x86_64/badge/icon)](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/ubuntu2204-x86_64/)
++ x86\_64 Ubuntu 24.04 LTS [![Build Status](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/ubuntu2404-x86_64/badge/icon)](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/ubuntu2404-x86_64/)
++ x86\_64 openEuler 23.09 [![Build Status](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/oE2309-x86_64/badge/icon)](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/oE2309-x86_64/)
++ x86\_64 openEuler 24.03 [![Build Status](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/oE2403-x86_64/badge/icon)](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/oE2403-x86_64/)
++ x86\_64 Archlinux [![Build Status](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/archlinux-x86_64/badge/icon)](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/archlinux-x86_64/)
++ x86\_64 Gentoo [![Build Status](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/gentoo-x86_64/badge/icon)](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/gentoo-x86_64/)
++ x86\_64 openKylin 1.0.2 [![Build Status](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/openkylin-x86_64/badge/icon)](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/openkylin-x86_64/)
++ riscv64 Debian sid [![Build Status](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/debiansid-riscv64/badge/icon)](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/debiansid-riscv64/)
++ riscv64 Fedora 38 [![Build Status](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/fedora38-riscv64/badge/icon)](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/fedora38-riscv64/)
++ riscv64 Fedora 38 Pioneer Box [![Build Status](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/fedora38-riscv64-pbx/badge/icon)](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/fedora38-riscv64-pbx/)
++ riscv64 Ubuntu 22.04 LTS [![Build Status](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/ubuntu2204-riscv64/badge/icon)](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/ubuntu2204-riscv64/)
++ riscv64 Ubuntu 24.04 LTS [![Build Status](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/ubuntu2404-riscv64/badge/icon)](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/ubuntu2404-riscv64/)
++ riscv64 RevyOS 20240601 [![Build Status](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/revyos-riscv64/badge/icon)](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/revyos-riscv64/)
++ riscv64 RevyOS 20240601 LicheePi 4A [![Build Status](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/revyos-riscv64-lp4a/badge/icon)](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/revyos-riscv64-lp4a/)
++ riscv64 openEuler 23.09 [![Build Status](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/oE2309-riscv64/badge/icon)](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/oE2309-riscv64/)
++ riscv64 openEuler 23.09 LicheePi 4A [![Build Status](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/oE2309-riscv64-lp4a/badge/icon)](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/oE2309-riscv64-lp4a/)
++ riscv64 openEuler 23.09 Pioneer Box [![Build Status](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/oE2309-riscv64-pbx/badge/icon)](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/oE2309-riscv64-pbx/)
++ riscv64 openEuler 24.03 [![Build Status](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/oE2403-riscv64/badge/icon)](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/oE2403-riscv64/)
++ riscv64 Archlinux [![Build Status](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/archlinux-riscv64/badge/icon)](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/archlinux-riscv64/)
++ riscv64 Gentoo [![Build Status](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/gentoo-riscv64/badge/icon)](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/gentoo-riscv64/)
++ riscv64 openKylin 1.0.1 [![Build Status](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/openkylin-riscv64/badge/icon)](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/openkylin-riscv64/)
++ aarch64 Debian 12 [![Build Status](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/debian12-aarch64/badge/icon)](https://jenkins.inuyasha.love/job/ruyi-reimu-mugen-auto-test/job/debian12-aarch64/)
 
 ## 对上游 mugen 的更改
 
