@@ -6,7 +6,7 @@
 # THIS PROGRAM IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND,
 # EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT,
 # MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
-# See the Mulan PSL v2 for more detaitest -f.
+# See the Mulan PSL v2 for more details.
 
 # #############################################
 # @Author       :   KotorinMinami
@@ -17,6 +17,7 @@
 # @Desc         :   ruyisdk mugen device libs
 # #############################################
 
+source "./load_translations.sh"  # load translation function
 source "${OET_PATH}"/libs/locallibs/common_lib.sh
 source "../common/common_lib.sh"
 
@@ -39,7 +40,7 @@ function recursion_run() {
     local end_exec=$2
 
     if [[ ${#now_exec} -gt 100 ]]; then
-        LOG_ERROR "Quit test due to $now_exec longer then 100"
+        LOG_ERROR "$(gettext "Quit test due to {now_exec} longer than 100")"
         return 1
     fi
 
@@ -67,7 +68,7 @@ function recursion_run() {
 
     local ret
     ret=0
-    grep "Proceed with flashing" /tmp/ruyi_device/output
+    grep "$(gettext "Proceed with flashing")" /tmp/ruyi_device/output
     if [[ $? -eq 0 ]]; then
         rm -rf /tmp/ruyi_device/test
         touch /tmp/ruyi_device/test
@@ -78,7 +79,7 @@ function recursion_run() {
         #ret=$(expr $ret + $?)
         return $ret;
     fi
-    grep "Please give the path for the target's whole disk" /tmp/ruyi_device/output
+    grep "$(gettext "Please give the path for the target's whole disk")" /tmp/ruyi_device/output
     if [[ $? -eq 0 ]]; then
         #rm -rf /tmp/ruyi_device/test
         #touch /tmp/ruyi_device/test
@@ -86,12 +87,12 @@ function recursion_run() {
         recursion_run "$now_exec" "y"
         return $?;
     fi
-    grep "NOTE: You have to consult the official documentation" /tmp/ruyi_device/output
+    grep "$(gettext "NOTE: You have to consult the official documentation")" /tmp/ruyi_device/output
     if [[ $? -eq 0 ]]; then
         recursion_run "$now_exec" "1"
         return $?
     fi
-    grep 'Proceed' /tmp/ruyi_device/output
+    grep "$(gettext 'Proceed')" /tmp/ruyi_device/output
     if [[ $? -eq 0 ]]; then
         test_ouput /tmp/ruyi_device/output 'Proceed'
         local next_step=(${result_item[@]})
@@ -102,7 +103,7 @@ function recursion_run() {
         done
         return $ret;
     fi
-    grep 'Choice' /tmp/ruyi_device/output
+    grep "$(gettext 'Choice')" /tmp/ruyi_device/output
     if [[ $? -eq 0 ]]; then
         test_ouput /tmp/ruyi_device/output 'Choice'
         local next_step=(${result_item[@]})
@@ -114,7 +115,7 @@ function recursion_run() {
         done
         return $ret;
     fi
-    grep 'Continue' /tmp/ruyi_device/output
+    grep "$(gettext 'Continue')" /tmp/ruyi_device/output
     if [[ $? -eq 0 ]]; then
         test_ouput /tmp/ruyi_device/output 'Continue'
         local next_step=(${result_item[@]})

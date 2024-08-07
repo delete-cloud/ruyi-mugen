@@ -6,7 +6,7 @@
 # THIS PROGRAM IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND,
 # EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT,
 # MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
-# See the Mulan PSL v2 for more detaitest -f.
+# See the Mulan PSL v2 for more details.
 
 # ##################################################################################
 # @Author    :   weilinfox
@@ -16,22 +16,23 @@
 # @Desc      :   ruyisdk cormark test from https://github.com/ruyisdk/ruyi/issues/10
 # ##################################################################################
 
+source "./load_translations.sh"  # load translation function
 source "./common/common_lib.sh"
 
 EXECUTE_T=60m
 
 function pre_test() {
-    LOG_INFO "Start environmental preparation."
-    install_ruyi || LOG_ERROR "Install ruyi error"
+    LOG_INFO "$(gettext "Start environmental preparation.")"
+    install_ruyi || LOG_ERROR "$(gettext "Install ruyi error")"
     DNF_INSTALL "cmake ninja-build"
     APT_INSTALL "cmake ninja-build"
     PACMAN_INSTALL "cmake ninja"
     EMERGE_INSTALL "dev-build/cmake dev-build/ninja"
-    LOG_INFO "End of environmental preparation!"
+    LOG_INFO "$(gettext "End of environmental preparation!")"
 }
 
 function run_test() {
-    LOG_INFO "Start to run test."
+    LOG_INFO "$(gettext "Start to run test.")"
 
     mkdir build && cd build
     tar zxf "../common/source/zlib-ng-2.1.5.tar.gz"
@@ -46,7 +47,7 @@ function run_test() {
     sed -i 's/\bgcc\b/riscv64-plctxthead-linux-gnu-gcc/g' linux64/core_portme.mak 
     make PORT_DIR=linux64 link
     file coremark.exe | grep -i "RISC-V"
-    CHECK_RESULT $? 0 0 "Check ruyi coremark build failed"
+    CHECK_RESULT $? 0 0 "$(gettext "Check ruyi coremark build failed")"
     ruyi-deactivate
 
     tar zxf "../common/source/zlib-ng-2.1.5.tar.gz"
@@ -57,21 +58,20 @@ function run_test() {
     ninja
     ninja install
     ls "$(pwd)/zlib_my_install/include"
-    CHECK_RESULT $? 0 0 "Check ruyi zlib-ng build failed"
+    CHECK_RESULT $? 0 0 "$(gettext "Check ruyi zlib-ng build failed")"
     ruyi-deactivate
     cd ..
 
     cd .. && rm -rf build
 
-    LOG_INFO "End of the test."
+    LOG_INFO "$(gettext "End of the test.")"
 }
 
 function post_test() {
-    LOG_INFO "start environment cleanup."
+    LOG_INFO "$(gettext "Start environment cleanup.")"
     remove_ruyi
     PKG_REMOVE
-    LOG_INFO "Finish environment cleanup!"
+    LOG_INFO "$(gettext "Finish environment cleanup!")"
 }
 
 main "$@"
-
