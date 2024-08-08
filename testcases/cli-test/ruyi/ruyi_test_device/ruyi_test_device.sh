@@ -17,7 +17,7 @@
 # @Desc         :   ruyisdk device smoke test
 # #############################################
 
-source "../../../i18n//load_translations.sh"  # load translation function
+source "../../../i18n/load_translations.sh"  # load translation function
 source "./common/device_lib.sh"
 source "../common/common_lib.sh"
 

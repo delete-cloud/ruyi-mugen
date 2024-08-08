@@ -17,7 +17,7 @@
 # #############################################
 
 source "${OET_PATH}"/libs/locallibs/common_lib.sh
-source "../../../i18n//load_translations.sh"  # load translation function
+source "../../../i18n/load_translations.sh"  # load translation function
 
 get_ruyi_dir() {
     ruyibase=$XDG_CACHE_HOME

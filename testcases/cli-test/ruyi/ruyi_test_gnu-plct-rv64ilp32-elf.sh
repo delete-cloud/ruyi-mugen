@@ -16,7 +16,7 @@
 # @Desc      :   ruyisdk gnu-plct-rv64ilp32-elf test
 # ###################################################
 
-source "../../i18n//load_translations.sh"  # load translation function
+source "../../i18n/load_translations.sh"  # load translation function
 source "./common/common_lib.sh"
 
 function pre_test() {
