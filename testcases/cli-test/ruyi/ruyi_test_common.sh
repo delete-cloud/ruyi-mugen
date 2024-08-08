@@ -16,7 +16,7 @@
 # @Desc      :   ruyisdk common tests
 # #############################################
 
-source "./load_translations.sh"  # load translation function
+source "../../i18n//load_translations.sh"  # load translation function
 source "./common/common_lib.sh"
 
 function pre_test() {

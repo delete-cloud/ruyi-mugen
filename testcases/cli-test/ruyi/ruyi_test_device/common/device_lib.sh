@@ -17,9 +17,9 @@
 # @Desc         :   ruyisdk mugen device libs
 # #############################################
 
+source "../i18n/load_translations.sh"  # load translation function
 source "${OET_PATH}"/libs/locallibs/common_lib.sh
 source "../common/common_lib.sh"
-source "./load_translations.sh"  # load translation function
 
 result_item=()
 

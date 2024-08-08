@@ -16,7 +16,7 @@
 # @Desc      :   ruyisdk cormark test from https://github.com/ruyisdk/ruyi/issues/10
 # ##################################################################################
 
-source "./load_translations.sh"  # load translation function
+source "../../i18n//load_translations.sh"  # load translation function
 source "./common/common_lib.sh"
 
 EXECUTE_T=60m
