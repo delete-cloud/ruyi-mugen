@@ -1,0 +1,500 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-08 14:47+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: smoke-test/ruyismoke/ruyi_smoke_device_provision/common/device_lib.sh:43
+msgid "Quit test due to {now_exec} longer than 100"
+msgstr "由于 {now_exec} 长度超过 100，退出测试"
+
+#: smoke-test/ruyismoke/ruyi_smoke_device_provision/common/device_lib.sh:71
+#: cli-test/ruyi/ruyi_test_device/common/device_lib.sh:96
+msgid "Proceed with flashing"
+msgstr "继续刷写"
+
+#: smoke-test/ruyismoke/ruyi_smoke_device_provision/common/device_lib.sh:82
+#: cli-test/ruyi/ruyi_test_device/common/device_lib.sh:106
+msgid "Please give the path for the target's whole disk"
+msgstr "请提供目标整个磁盘的路径"
+
+#: smoke-test/ruyismoke/ruyi_smoke_device_provision/common/device_lib.sh:90
+#: cli-test/ruyi/ruyi_test_device/common/device_lib.sh:113
+msgid "NOTE: You have to consult the official documentation"
+msgstr "注意：您必须查阅官方文档"
+
+#: smoke-test/ruyismoke/ruyi_smoke_device_provision/common/device_lib.sh:95
+#: cli-test/ruyi/ruyi_test_device/common/device_lib.sh:118
+msgid "Proceed"
+msgstr "继续"
+
+#: smoke-test/ruyismoke/ruyi_smoke_device_provision/common/device_lib.sh:106
+#: cli-test/ruyi/ruyi_test_device/common/device_lib.sh:129
+msgid "Choice"
+msgstr "选择"
+
+#: smoke-test/ruyismoke/ruyi_smoke_device_provision/common/device_lib.sh:118
+#: cli-test/ruyi/ruyi_test_device/common/device_lib.sh:141
+msgid "Continue"
+msgstr "继续"
+
+#: cli-test/ruyi/ruyi_test_venv.sh:23 cli-test/ruyi/ruyi_test_config.sh:23
+#: cli-test/ruyi/ruyi_test_xdg.sh:23 cli-test/ruyi/ruyi_test_cmake_ninja.sh:25
+#: cli-test/ruyi/ruyi_test_gnu-plct-rv64ilp32-elf.sh:23
+#: cli-test/ruyi/ruyi_test_xthead_qemu.sh:23
+#: cli-test/ruyi/ruyi_test_binaries.sh:25 cli-test/ruyi/ruyi_test_qemu.sh:23
+#: cli-test/ruyi/ruyi_test_news.sh:23 cli-test/ruyi/ruyi_test_common.sh:23
+#: cli-test/ruyi/ruyi_test_device/ruyi_test_device.sh:27
+#: cli-test/ruyi/ruyi_test_admin.sh:23 cli-test/ruyi/ruyi_test_llvm.sh:23
+#: cli-test/ruyi/ruyi_test_gnu-plct_xiangshan-nanhu.sh:23
+msgid "Start environmental preparation."
+msgstr "开始环境准备。"
+
+#: cli-test/ruyi/ruyi_test_venv.sh:24 cli-test/ruyi/ruyi_test_config.sh:24
+#: cli-test/ruyi/ruyi_test_xdg.sh:24 cli-test/ruyi/ruyi_test_cmake_ninja.sh:26
+#: cli-test/ruyi/ruyi_test_gnu-plct-rv64ilp32-elf.sh:24
+#: cli-test/ruyi/ruyi_test_xthead_qemu.sh:24
+#: cli-test/ruyi/ruyi_test_binaries.sh:26 cli-test/ruyi/ruyi_test_qemu.sh:24
+#: cli-test/ruyi/ruyi_test_news.sh:24 cli-test/ruyi/ruyi_test_common.sh:24
+#: cli-test/ruyi/ruyi_test_device/ruyi_test_device.sh:28
+#: cli-test/ruyi/ruyi_test_admin.sh:24 cli-test/ruyi/ruyi_test_llvm.sh:24
+#: cli-test/ruyi/ruyi_test_gnu-plct_xiangshan-nanhu.sh:24
+msgid "Install ruyi error"
+msgstr "安装 ruyi 出错"
+
+#: cli-test/ruyi/ruyi_test_venv.sh:25 cli-test/ruyi/ruyi_test_config.sh:25
+#: cli-test/ruyi/ruyi_test_xdg.sh:25 cli-test/ruyi/ruyi_test_cmake_ninja.sh:31
+#: cli-test/ruyi/ruyi_test_gnu-plct-rv64ilp32-elf.sh:25
+#: cli-test/ruyi/ruyi_test_xthead_qemu.sh:25
+#: cli-test/ruyi/ruyi_test_binaries.sh:27 cli-test/ruyi/ruyi_test_qemu.sh:25
+#: cli-test/ruyi/ruyi_test_news.sh:25 cli-test/ruyi/ruyi_test_common.sh:25
+#: cli-test/ruyi/ruyi_test_device/ruyi_test_device.sh:30
+#: cli-test/ruyi/ruyi_test_admin.sh:25 cli-test/ruyi/ruyi_test_llvm.sh:25
+#: cli-test/ruyi/ruyi_test_gnu-plct_xiangshan-nanhu.sh:25
+msgid "End of environmental preparation!"
+msgstr "环境准备结束！"
+
+#: cli-test/ruyi/ruyi_test_venv.sh:29 cli-test/ruyi/ruyi_test_config.sh:29
+#: cli-test/ruyi/ruyi_test_xdg.sh:29 cli-test/ruyi/ruyi_test_cmake_ninja.sh:35
+#: cli-test/ruyi/ruyi_test_gnu-plct-rv64ilp32-elf.sh:29
+#: cli-test/ruyi/ruyi_test_xthead_qemu.sh:29
+#: cli-test/ruyi/ruyi_test_binaries.sh:64 cli-test/ruyi/ruyi_test_qemu.sh:29
+#: cli-test/ruyi/ruyi_test_news.sh:29 cli-test/ruyi/ruyi_test_common.sh:29
+#: cli-test/ruyi/ruyi_test_device/ruyi_test_device.sh:34
+#: cli-test/ruyi/ruyi_test_admin.sh:29 cli-test/ruyi/ruyi_test_llvm.sh:29
+#: cli-test/ruyi/ruyi_test_gnu-plct_xiangshan-nanhu.sh:29
+msgid "Start to run test."
+msgstr "开始运行测试。"
+
+#: cli-test/ruyi/ruyi_test_venv.sh:33
+msgid "The virtual environment is now created."
+msgstr "虚拟环境已创建。"
+
+#: cli-test/ruyi/ruyi_test_venv.sh:34
+msgid "Check ruyi venv install failed"
+msgstr "检查 ruyi venv 安装失败"
+
+#: cli-test/ruyi/ruyi_test_venv.sh:36
+msgid "Check ruyi venv activate file failed"
+msgstr "检查 ruyi venv 激活文件失败"
+
+#: cli-test/ruyi/ruyi_test_venv.sh:40
+msgid "Check activate ruyi venv PS1 failed"
+msgstr "检查激活 ruyi venv PS1 失败"
+
+#: cli-test/ruyi/ruyi_test_venv.sh:43
+msgid "Check deactivate ruyi venv PS1 failed"
+msgstr "检查停用 ruyi venv PS1 失败"
+
+#: cli-test/ruyi/ruyi_test_venv.sh:46 cli-test/ruyi/ruyi_test_config.sh:65
+#: cli-test/ruyi/ruyi_test_cmake_ninja.sh:67
+#: cli-test/ruyi/ruyi_test_xthead_qemu.sh:83
+#: cli-test/ruyi/ruyi_test_binaries.sh:73 cli-test/ruyi/ruyi_test_qemu.sh:69
+#: cli-test/ruyi/ruyi_test_news.sh:41 cli-test/ruyi/ruyi_test_common.sh:119
+#: cli-test/ruyi/ruyi_test_device/ruyi_test_device.sh:52
+#: cli-test/ruyi/ruyi_test_admin.sh:39 cli-test/ruyi/ruyi_test_llvm.sh:97
+#: cli-test/ruyi/ruyi_test_gnu-plct_xiangshan-nanhu.sh:79
+msgid "End of the test."
+msgstr "测试结束。"
+
+#: cli-test/ruyi/ruyi_test_venv.sh:50 cli-test/ruyi/ruyi_test_config.sh:69
+#: cli-test/ruyi/ruyi_test_cmake_ninja.sh:71
+#: cli-test/ruyi/ruyi_test_xthead_qemu.sh:87
+#: cli-test/ruyi/ruyi_test_binaries.sh:77 cli-test/ruyi/ruyi_test_qemu.sh:73
+#: cli-test/ruyi/ruyi_test_news.sh:45 cli-test/ruyi/ruyi_test_common.sh:123
+#: cli-test/ruyi/ruyi_test_device/ruyi_test_device.sh:56
+#: cli-test/ruyi/ruyi_test_admin.sh:43 cli-test/ruyi/ruyi_test_llvm.sh:101
+#: cli-test/ruyi/ruyi_test_gnu-plct_xiangshan-nanhu.sh:83
+msgid "Start environment cleanup."
+msgstr "开始环境清理。"
+
+#: cli-test/ruyi/ruyi_test_venv.sh:52 cli-test/ruyi/ruyi_test_config.sh:71
+#: cli-test/ruyi/ruyi_test_cmake_ninja.sh:74
+#: cli-test/ruyi/ruyi_test_xthead_qemu.sh:89
+#: cli-test/ruyi/ruyi_test_binaries.sh:79 cli-test/ruyi/ruyi_test_qemu.sh:75
+#: cli-test/ruyi/ruyi_test_news.sh:47 cli-test/ruyi/ruyi_test_common.sh:125
+#: cli-test/ruyi/ruyi_test_device/ruyi_test_device.sh:59
+#: cli-test/ruyi/ruyi_test_admin.sh:45 cli-test/ruyi/ruyi_test_llvm.sh:103
+#: cli-test/ruyi/ruyi_test_gnu-plct_xiangshan-nanhu.sh:85
+msgid "Finish environment cleanup!"
+msgstr "环境清理完成！"
+
+#: cli-test/ruyi/ruyi_test_config.sh:44 cli-test/ruyi/ruyi_test_xdg.sh:44
+#: cli-test/ruyi/ruyi_test_binaries.sh:67 cli-test/ruyi/ruyi_test_common.sh:46
+msgid "Check ruyi update failed"
+msgstr "检查 ruyi 更新失败"
+
+#: cli-test/ruyi/ruyi_test_config.sh:46
+msgid "Check ruyi local failed"
+msgstr "检查 ruyi 本地失败"
+
+#: cli-test/ruyi/ruyi_test_config.sh:48
+msgid "Check ruyi orig local failed"
+msgstr "检查 ruyi 原本地失败"
+
+#: cli-test/ruyi/ruyi_test_config.sh:55
+msgid "Check ruyi remote failed"
+msgstr "检查 ruyi 远程失败"
+
+#: cli-test/ruyi/ruyi_test_config.sh:60
+msgid "Check ruyi branch failed"
+msgstr "检查 ruyi 分支失败"
+
+#: cli-test/ruyi/ruyi_test_xdg.sh:42 cli-test/ruyi/ruyi_test_common.sh:42
+msgid "Check ruyi empty list failed"
+msgstr "检查 ruyi 空列表失败"
+
+#: cli-test/ruyi/ruyi_test_xdg.sh:46 cli-test/ruyi/ruyi_test_common.sh:48
+msgid "Check ruyi list failed"
+msgstr "检查 ruyi 列表失败"
+
+#: cli-test/ruyi/ruyi_test_xdg.sh:47 cli-test/ruyi/ruyi_test_xdg.sh:49
+msgid "Package declares"
+msgstr "包声明"
+
+#: cli-test/ruyi/ruyi_test_xdg.sh:48 cli-test/ruyi/ruyi_test_common.sh:50
+msgid "Check ruyi brief list failed"
+msgstr "检查 ruyi 简略列表失败"
+
+#: cli-test/ruyi/ruyi_test_xdg.sh:50 cli-test/ruyi/ruyi_test_common.sh:52
+msgid "Check ruyi list verbose package failed"
+msgstr "检查 ruyi 详细列表包失败"
+
+#: cli-test/ruyi/ruyi_test_xdg.sh:51
+msgid "Binary artifacts"
+msgstr "二进制工件"
+
+#: cli-test/ruyi/ruyi_test_xdg.sh:52 cli-test/ruyi/ruyi_test_common.sh:54
+msgid "Check ruyi list verbose artifacts failed"
+msgstr "检查 ruyi 详细列表工件失败"
+
+#: cli-test/ruyi/ruyi_test_xdg.sh:53
+msgid "Toolchain metadata"
+msgstr "工具链元数据"
+
+#: cli-test/ruyi/ruyi_test_xdg.sh:54 cli-test/ruyi/ruyi_test_common.sh:56
+msgid "Check ruyi list verbose metadata failed"
+msgstr "检查 ruyi 详细列表元数据失败"
+
+#: cli-test/ruyi/ruyi_test_xdg.sh:57 cli-test/ruyi/ruyi_test_news.sh:39
+msgid "Check ruyi news list failed"
+msgstr "检查 ruyi 新闻列表失败"
+
+#: cli-test/ruyi/ruyi_test_xdg.sh:59 cli-test/ruyi/ruyi_test_news.sh:33
+msgid "Check ruyi news read failed"
+msgstr "检查 ruyi 新闻读取失败"
+
+#: cli-test/ruyi/ruyi_test_xdg.sh:63 cli-test/ruyi/ruyi_test_xthead_qemu.sh:36
+#: cli-test/ruyi/ruyi_test_xthead_qemu.sh:44
+msgid "no binary for current host"
+msgstr "当前主机无二进制"
+
+#: cli-test/ruyi/ruyi_test_xdg.sh:70 cli-test/ruyi/ruyi_test_common.sh:72
+msgid "No supported binary package found"
+msgstr "未找到支持的二进制包"
+
+#: cli-test/ruyi/ruyi_test_xdg.sh:73 cli-test/ruyi/ruyi_test_common.sh:79
+msgid "Check ruyi install package failed"
+msgstr "检查 ruyi 安装包失败"
+
+#: cli-test/ruyi/ruyi_test_xdg.sh:74 cli-test/ruyi/ruyi_test_common.sh:80
+#: cli-test/ruyi/ruyi_test_common.sh:82 cli-test/ruyi/ruyi_test_common.sh:84
+msgid "skipping already installed package"
+msgstr "跳过已安装包"
+
+#: cli-test/ruyi/ruyi_test_xdg.sh:75 cli-test/ruyi/ruyi_test_common.sh:81
+msgid "Check ruyi install duplicate package failed"
+msgstr "检查 ruyi 安装重复包失败"
+
+#: cli-test/ruyi/ruyi_test_xdg.sh:79
+msgid "Check ruyi create xdg based cache directory failed"
+msgstr "检查 ruyi 创建基于 xdg 的缓存目录失败"
+
+#: cli-test/ruyi/ruyi_test_xdg.sh:81
+msgid "Check ruyi create default cache directory failed"
+msgstr "检查 ruyi 创建默认缓存目录失败"
+
+#: cli-test/ruyi/ruyi_test_xdg.sh:83
+msgid "Check ruyi create xdg based data directory failed"
+msgstr "检查 ruyi 创建基于 xdg 的数据目录失败"
+
+#: cli-test/ruyi/ruyi_test_xdg.sh:85
+msgid "Check ruyi create default data directory failed"
+msgstr "检查 ruyi 创建默认数据目录失败"
+
+#: cli-test/ruyi/ruyi_test_xdg.sh:87
+msgid "Check ruyi create xdg based state directory failed"
+msgstr "检查 ruyi 创建基于 xdg 的状态目录失败"
+
+#: cli-test/ruyi/ruyi_test_xdg.sh:89
+msgid "Check ruyi create default state directory failed"
+msgstr "检查 ruyi 创建默认状态目录失败"
+
+#: cli-test/ruyi/ruyi_test_xdg.sh:92
+msgid "Check ruyi xdg self purge failed"
+msgstr "检查 ruyi xdg 自清除失败"
+
+#: cli-test/ruyi/ruyi_test_xdg.sh:94
+msgid "Check ruyi xdg purge cache dir exists failed"
+msgstr "检查 ruyi xdg 清除缓存目录存在失败"
+
+#: cli-test/ruyi/ruyi_test_xdg.sh:96
+msgid "Check ruyi xdg purge data dir exists failed"
+msgstr "检查 ruyi xdg 清除数据目录存在失败"
+
+#: cli-test/ruyi/ruyi_test_xdg.sh:98
+msgid "Check ruyi xdg purge state dir exists failed"
+msgstr "检查 ruyi xdg 清除状态目录存在失败"
+
+#: cli-test/ruyi/ruyi_test_cmake_ninja.sh:50
+msgid "Check ruyi coremark build failed"
+msgstr "检查 ruyi coremark 构建失败"
+
+#: cli-test/ruyi/ruyi_test_cmake_ninja.sh:61
+msgid "Check ruyi zlib-ng build failed"
+msgstr "检查 ruyi zlib-ng 构建失败"
+
+#: cli-test/ruyi/ruyi_test_gnu-plct-rv64ilp32-elf.sh:36
+msgid "No binary for current host, skip testing"
+msgstr "当前主机无二进制，跳过测试"
+
+#: cli-test/ruyi/ruyi_test_gnu-plct-rv64ilp32-elf.sh:38
+msgid "gnu-plct-rv64ilp32-elf installation failed"
+msgstr "gnu-plct-rv64ilp32-elf 安装失败"
+
+#: cli-test/ruyi/ruyi_test_gnu-plct-rv64ilp32-elf.sh:44
+#: cli-test/ruyi/ruyi_test_qemu.sh:45
+#: cli-test/ruyi/ruyi_test_gnu-plct_xiangshan-nanhu.sh:44
+msgid "Check ruyi venv creation failed"
+msgstr "检查 ruyi venv 创建失败"
+
+#: cli-test/ruyi/ruyi_test_gnu-plct-rv64ilp32-elf.sh:50
+#: cli-test/ruyi/ruyi_test_gnu-plct_xiangshan-nanhu.sh:68
+msgid "Check test.c creation failed"
+msgstr "检查 test.c 创建失败"
+
+#: cli-test/ruyi/ruyi_test_gnu-plct-rv64ilp32-elf.sh:55
+#: cli-test/ruyi/ruyi_test_gnu-plct_xiangshan-nanhu.sh:73
+msgid "Check test.c compilation failed"
+msgstr "检查 test.c 编译失败"
+
+#: cli-test/ruyi/ruyi_test_gnu-plct-rv64ilp32-elf.sh:58
+msgid "Check test.o 32bit failed"
+msgstr "检查 test.o 32 位失败"
+
+#: cli-test/ruyi/ruyi_test_gnu-plct-rv64ilp32-elf.sh:61
+msgid "Check test.o 64bit reg failed"
+msgstr "检查 test.o 64 位寄存器失败"
+
+#: cli-test/ruyi/ruyi_test_xthead_qemu.sh:51
+msgid "Check ruyi xthead toolchain install failed"
+msgstr "检查 ruyi xthead 工具链安装失败"
+
+#: cli-test/ruyi/ruyi_test_xthead_qemu.sh:53
+msgid "Check ruyi xthead venv creation failed"
+msgstr "检查 ruyi xthead venv 创建失败"
+
+#: cli-test/ruyi/ruyi_test_xthead_qemu.sh:69 cli-test/ruyi/ruyi_test_qemu.sh:61
+msgid "Check ruyi compilation failed"
+msgstr "检查 ruyi 编译失败"
+
+#: cli-test/ruyi/ruyi_test_xthead_qemu.sh:72 cli-test/ruyi/ruyi_test_qemu.sh:63
+msgid "Check ruyi emulation failed"
+msgstr "检查 ruyi 仿真失败"
+
+#: cli-test/ruyi/ruyi_test_xthead_qemu.sh:76
+msgid "Check xthead bin run on revyos failed"
+msgstr "检查 xthead 二进制在 revyos 上运行失败"
+
+#: cli-test/ruyi/ruyi_test_qemu.sh:43 cli-test/ruyi/ruyi_test_llvm.sh:56
+#: cli-test/ruyi/ruyi_test_llvm.sh:81
+msgid "Check ruyi toolchain install failed"
+msgstr "检查 ruyi 工具链安装失败"
+
+#: cli-test/ruyi/ruyi_test_news.sh:34
+msgid "No news to display."
+msgstr "无新闻显示。"
+
+#: cli-test/ruyi/ruyi_test_news.sh:35
+msgid "Check ruyi news read empty failed"
+msgstr "检查 ruyi 新闻读取为空失败"
+
+#: cli-test/ruyi/ruyi_test_news.sh:37
+msgid "Check ruyi news read 1 failed"
+msgstr "检查 ruyi 新闻读取 1 失败"
+
+#: cli-test/ruyi/ruyi_test_news.sh:38
+msgid "News items"
+msgstr "新闻条目"
+
+#: cli-test/ruyi/ruyi_test_common.sh:33
+msgid "Check ruyi version failed"
+msgstr "检查 ruyi 版本失败"
+
+#: cli-test/ruyi/ruyi_test_common.sh:38
+msgid "Check ruyi empty cmdline help failed"
+msgstr "检查 ruyi 空命令行帮助失败"
+
+#: cli-test/ruyi/ruyi_test_common.sh:40
+msgid "Check ruyi help failed"
+msgstr "检查 ruyi 帮助失败"
+
+#: cli-test/ruyi/ruyi_test_common.sh:44
+msgid "Check ruyi create cache directory failed"
+msgstr "检查 ruyi 创建缓存目录失败"
+
+#: cli-test/ruyi/ruyi_test_common.sh:58
+msgid "Check ruyi profile failed"
+msgstr "检查 ruyi 配置文件失败"
+
+#: cli-test/ruyi/ruyi_test_common.sh:75
+msgid "Check ruyi install package from wrong proxy failed"
+msgstr "检查 ruyi 从错误代理安装包失败"
+
+#: cli-test/ruyi/ruyi_test_common.sh:76
+msgid "Basic connectivity problems"
+msgstr "基本连接问题"
+
+#: cli-test/ruyi/ruyi_test_common.sh:77
+msgid "Check ruyi install failure message failed"
+msgstr "检查 ruyi 安装失败信息失败"
+
+#: cli-test/ruyi/ruyi_test_common.sh:78
+msgid "downloading"
+msgstr "下载中"
+
+#: cli-test/ruyi/ruyi_test_common.sh:83
+msgid "Check ruyi install duplicate package by name failed"
+msgstr "检查 ruyi 按名称安装重复包失败"
+
+#: cli-test/ruyi/ruyi_test_common.sh:85
+msgid "Check ruyi install duplicate package by expr failed"
+msgstr "检查 ruyi 按表达式安装重复包失败"
+
+#: cli-test/ruyi/ruyi_test_common.sh:91
+msgid "Check ruyi extract failed"
+msgstr "检查 ruyi 提取失败"
+
+#: cli-test/ruyi/ruyi_test_common.sh:93
+msgid "Check ruyi extract dir not empty failed"
+msgstr "检查 ruyi 提取目录不为空失败"
+
+#: cli-test/ruyi/ruyi_test_common.sh:97
+msgid "Check ruyi self uninstall failed"
+msgstr "检查 ruyi 自卸载失败"
+
+#: cli-test/ruyi/ruyi_test_common.sh:99
+msgid "Check ruyi uninstall exists failed"
+msgstr "检查 ruyi 卸载存在失败"
+
+#: cli-test/ruyi/ruyi_test_common.sh:101
+msgid "Check ruyi cache dir exists failed"
+msgstr "检查 ruyi 缓存目录存在失败"
+
+#: cli-test/ruyi/ruyi_test_common.sh:103
+msgid "Check ruyi data dir exists failed"
+msgstr "检查 ruyi 数据目录存在失败"
+
+#: cli-test/ruyi/ruyi_test_common.sh:105
+msgid "Check ruyi state dir exists failed"
+msgstr "检查 ruyi 状态目录存在失败"
+
+#: cli-test/ruyi/ruyi_test_common.sh:109
+msgid "Check ruyi self purge failed"
+msgstr "检查 ruyi 自清除失败"
+
+#: cli-test/ruyi/ruyi_test_common.sh:111
+msgid "Check ruyi purge exists failed"
+msgstr "检查 ruyi 清除存在失败"
+
+#: cli-test/ruyi/ruyi_test_common.sh:113
+msgid "Check ruyi purge cache dir exists failed"
+msgstr "检查 ruyi 清除缓存目录存在失败"
+
+#: cli-test/ruyi/ruyi_test_common.sh:115
+msgid "Check ruyi purge data dir exists failed"
+msgstr "检查 ruyi 清除数据目录存在失败"
+
+#: cli-test/ruyi/ruyi_test_common.sh:117
+msgid "Check ruyi purge state dir exists failed"
+msgstr "检查 ruyi 清除状态目录存在失败"
+
+#: cli-test/ruyi/ruyi_test_device/ruyi_test_device.sh:39
+msgid "Check recursion run failed"
+msgstr "检查递归运行失败"
+
+#: cli-test/ruyi/ruyi_test_device/common/device_lib.sh:55
+#: cli-test/ruyi/ruyi_test_device/common/device_lib.sh:58
+#: cli-test/ruyi/ruyi_test_device/common/device_lib.sh:61
+#: cli-test/ruyi/ruyi_test_device/common/device_lib.sh:68
+#: cli-test/ruyi/ruyi_test_device/common/device_lib.sh:73
+#: cli-test/ruyi/ruyi_test_device/common/device_lib.sh:78
+#: cli-test/ruyi/ruyi_test_device/common/device_lib.sh:163
+msgid "Happy hacking!"
+msgstr "愉快地破解！"
+
+#: cli-test/ruyi/ruyi_test_device/common/device_lib.sh:61
+#: cli-test/ruyi/ruyi_test_device/common/device_lib.sh:91
+msgid "failed to fetch distfile"
+msgstr "获取分发文件失败"
+
+#: cli-test/ruyi/ruyi_test_admin.sh:33
+msgid "Check ruyi admin manifest failed"
+msgstr "检查 ruyi 管理清单失败"
+
+#: cli-test/ruyi/ruyi_test_admin.sh:35
+msgid "Check ruyi admin manifest json format failed"
+msgstr "检查 ruyi 管理清单 json 格式失败"
+
+#: cli-test/ruyi/ruyi_test_admin.sh:37
+msgid "Check ruyi admin manifest toml format failed"
+msgstr "检查 ruyi 管理清单 toml 格式失败"
+
+#: cli-test/ruyi/ruyi_test_llvm.sh:58
+msgid "Check ruyi venv creation for llvm-upstream with gnu-upstream failed"
+msgstr "检查 ruyi 用 gnu-upstream 创建 llvm-upstream 的 venv 失败"
+
+#: cli-test/ruyi/ruyi_test_llvm.sh:74 cli-test/ruyi/ruyi_test_llvm.sh:88
+msgid "Check ruyi llvm compilation failed"
+msgstr "检查 ruyi llvm 编译失败"
+
+#: cli-test/ruyi/ruyi_test_llvm.sh:76 cli-test/ruyi/ruyi_test_llvm.sh:90
+msgid "Check ruyi binary failed"
+msgstr "检查 ruyi 二进制文件失败"
+
+#: cli-test/ruyi/ruyi_test_llvm.sh:83
+msgid "Check ruyi venv creation for llvm-upstream with gnu-plct failed"
+msgstr "检查 ruyi 用 gnu-plct 创建 llvm-upstream 的 venv 失败"
