@@ -26,22 +26,18 @@ function pre_test() {
     LOG_INFO "Start environmental preparation."
     install_ruyi || LOG_ERROR "Install ruyi error"
 
-    # Check if WPS is already installed
-    if ! dpkg -l | grep -q wps-office; then
-        LOG_INFO "WPS Office is not installed. Preparing to download..."
+    # Create necessary directories if they don't exist
+    mkdir -p "$CACHE_DIR"
 
-        # Create necessary directories if they don't exist
-        mkdir -p "$CACHE_DIR"
-
-        # Download WPS Office .deb file
-        if [ ! -f "$WPS_DEB_PATH" ]; then
-            wget -O "$WPS_DEB_PATH" "$WPS_DEB_URL" || {
-                LOG_ERROR "Failed to download WPS Office .deb file."
-                exit 1
-            }
-        fi
+    # Download WPS Office .deb file
+    if [ ! -f "$WPS_DEB_PATH" ]; then
+        LOG_INFO "Downloading WPS Office .deb file..."
+        wget -O "$WPS_DEB_PATH" "$WPS_DEB_URL" || {
+            LOG_ERROR "Failed to download WPS Office .deb file."
+            exit 1
+        }
     else
-        LOG_INFO "WPS Office is already installed."
+        LOG_INFO "WPS Office .deb file already exists, skipping download."
     fi
 
     LOG_INFO "End of environmental preparation!"
@@ -58,12 +54,16 @@ function run_test() {
         export LANG=$locale
         export LANGUAGE=$locale
 
-        ruyi update
+        LOG_INFO "Current locale settings: LC_ALL=$LC_ALL, LANG=$LANG, LANGUAGE=$LANGUAGE"
+        
+        ruyi update 2>&1 | tee -a "ruyi_update_${locale}.log"
         CHECK_RESULT $? 0 0 "Check ruyi update failed for locale $locale"
 
-        # Install WPS Office using ruyi
-        ruyi install --host x86_64 wps-office
+        # Install WPS Office using ruyi and redirect output
+        ruyi install --host x86_64 wps-office 2>&1 | tee -a "ruyi_install_wps_${locale}.log"
         CHECK_RESULT $? 0 0 "Check ruyi install wps-office failed for locale $locale"
+        
+        LOG_INFO "Finished testing with locale: $locale"
     done
 
     LOG_INFO "End of the test."
