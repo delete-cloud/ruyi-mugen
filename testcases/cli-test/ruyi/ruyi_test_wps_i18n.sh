@@ -72,7 +72,7 @@ function run_test() {
 
         # 2. Download the deb package and retry the installation
         LOG_INFO "Downloading WPS Office deb package..."
-        wget -O "$WPS_DEB_PATH" "$WPS_DEB_URL" || {
+        curl -L -o "$WPS_DEB_PATH" "$WPS_DEB_URL" || {
             LOG_ERROR "Failed to download WPS Office .deb file."
             exit 1
         }
