@@ -96,6 +96,10 @@ function run_test() {
         fi
         
         LOG_INFO "Finished testing with locale: $locale"
+
+        LOG_INFO "remove WPS Office: $WPS_DEB_PATH"
+        rm -rf "$WPS_DEB_PATH"
+
     done
 
     LOG_INFO "End of the test."
