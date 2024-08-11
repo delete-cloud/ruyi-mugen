@@ -21,6 +21,7 @@ source "./common/common_lib.sh"
 WPS_DEB_URL="https://mirrors.163.com/ubuntukylin/pool/partner/wps-office_11.1.0.11720_amd64.deb"
 CACHE_DIR="${HOME}/.cache/ruyi/distfiles"
 WPS_DEB_PATH="${CACHE_DIR}/$(basename "$WPS_DEB_URL")"
+RUYI_BINARY_CACHE= "~/.local/share/ruyi/binaries"
 
 function pre_test() {
     LOG_INFO "Start environmental preparation."
@@ -97,8 +98,9 @@ function run_test() {
         
         LOG_INFO "Finished testing with locale: $locale"
 
-        LOG_INFO "remove WPS Office: $WPS_DEB_PATH"
+        LOG_INFO "remove WPS Office: $WPS_DEB_PATH, $RUYI_BINARY_CACHE"
         rm -rf "$WPS_DEB_PATH"
+        rm -rf "$RUYI_BINARY_CACHE"
 
     done
 
