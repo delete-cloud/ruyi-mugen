@@ -48,6 +48,7 @@ report_name_js='{
 "oE2403-riscv64-lp4a":	"RUYI_包管理_LicheePi4A_openEuler24.03_riscv64_测试结果",
 "revyos-riscv64-lp4a":	"RUYI_包管理_LicheePi4A_RevyOS_riscv64_测试结果",
 "oE2309-riscv64-pbx":	"RUYI_包管理_Pioneer_Box_openEuler23.09_riscv64_测试结果",
+"oE2403-riscv64-pbx":	"RUYI_包管理_Pioneer_Box_openEuler24.03_riscv64_测试结果",
 "fedora38-riscv64-pbx":	"RUYI_包管理_Pioneer_Box_Fedora38_riscv64_测试结果"
 }'
 log_name_js='{
@@ -75,6 +76,7 @@ log_name_js='{
 "oE2403-riscv64-lp4a":	"oE2403-riscv64-lp4a",
 "revyos-riscv64-lp4a":	"revyos-riscv64-lp4a",
 "oE2309-riscv64-pbx":	"oE2309-riscv64-pbx",
+"oE2403-riscv64-pbx":	"oE2403-riscv64-pbx",
 "fedora38-riscv64-pbx":	"fedora38-riscv64-pbx"
 }'
 ruyitest_repo="https://gitee.com/yunxiangluo/ruyisdk-test/tree/master/20240312"
