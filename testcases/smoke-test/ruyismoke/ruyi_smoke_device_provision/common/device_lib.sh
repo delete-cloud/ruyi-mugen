@@ -28,7 +28,9 @@ function test_ouput() {
     if [[ "$output" == '(y/N)' ]]; then
         result_item=('y' 'n');
     elif [[ "$output" =~ (1-.) ]]; then
-        result_item=($(seq ${output:0-2:1}));
+        result_item=${output:0-3:2}
+        result_item=${result_item//-/}
+        result_item=($(seq $result_item));
     else
         result_item=('e');
     fi
