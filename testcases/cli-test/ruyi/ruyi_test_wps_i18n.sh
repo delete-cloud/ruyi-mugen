@@ -26,21 +26,6 @@ RUYI_BINARY_CACHE="${HOME}/.local/share/ruyi/binaries"
 function pre_test() {
     LOG_INFO "Start environmental preparation."
     install_ruyi || LOG_ERROR "Install ruyi error"
-
-    # # Create necessary directories if they don't exist
-    # mkdir -p "$CACHE_DIR"
-
-    # # Download WPS Office .deb file
-    # if [ ! -f "$WPS_DEB_PATH" ]; then
-    #     LOG_INFO "Downloading WPS Office .deb file..."
-    #     wget -O "$WPS_DEB_PATH" "$WPS_DEB_URL" || {
-    #         LOG_ERROR "Failed to download WPS Office .deb file."
-    #         exit 1
-    #     }
-    # else
-    #     LOG_INFO "WPS Office .deb file already exists, skipping download."
-    # fi
-
     LOG_INFO "End of environmental preparation!"
 }
 
