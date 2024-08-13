@@ -18,9 +18,8 @@
 
 source "${OET_PATH}"/libs/locallibs/common_lib.sh
 # export RUYI_FORCE_ALLOW_ROOT=x
-export ruyi_version="0.16.0"
 
-version="$ruyi_version"
+version=${ruyi_version:="0.16.0"}
 
 get_ruyi_dir() {
 	ruyibase=$XDG_CACHE_HOME
