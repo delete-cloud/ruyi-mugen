@@ -18,6 +18,9 @@
 
 source "${OET_PATH}"/libs/locallibs/common_lib.sh
 # export RUYI_FORCE_ALLOW_ROOT=x
+export ruyi_version="0.16.0"
+
+version="$ruyi_version"
 
 get_ruyi_dir() {
 	ruyibase=$XDG_CACHE_HOME
@@ -85,7 +88,6 @@ remove_ruyi_data() {
 }
 
 export_release_ruyi_link() {
-	version="0.15.0"
 	arch='amd64'
 	local larch="$(uname -m)"
 	if [ "$larch"  == "riscv64" ]; then arch='riscv64'; fi
@@ -94,7 +96,6 @@ export_release_ruyi_link() {
 }
 
 export_github_release_ruyi_link() {
-	version="0.15.0-beta.20240721"
 	arch='amd64'
 	local larch="$(uname -m)"
 	if [ "$larch"  == "riscv64" ]; then arch='riscv64'; fi
@@ -103,8 +104,11 @@ export_github_release_ruyi_link() {
 }
 
 export_ruyi_link() {
-	export_release_ruyi_link
-	#export_github_release_ruyi_link
+	if [[ "$version" =~ "-" ]]; then
+		export_github_release_ruyi_link
+	else
+		export_release_ruyi_link
+	fi
 }
 
 install_ruyi() {
