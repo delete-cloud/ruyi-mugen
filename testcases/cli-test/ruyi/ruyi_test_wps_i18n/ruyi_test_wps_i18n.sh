@@ -43,6 +43,7 @@ function run_test() {
         export LC_ALL=$locale
         export LANG=$locale
         export LANGUAGE=$locale
+        export LC_CTYPE=$locale
 
         LOG_INFO "Current locale settings: LC_ALL=$LC_ALL, LANG=$LANG, LANGUAGE=$LANGUAGE"
         
