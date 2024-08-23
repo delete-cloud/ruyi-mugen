@@ -45,7 +45,7 @@ function run_test() {
         export LANGUAGE=$locale
         export LC_CTYPE=$locale
 
-        LOG_INFO "Current locale settings: LC_ALL=$LC_ALL, LANG=$LANG, LANGUAGE=$LANGUAGE"
+        LOG_INFO "Current locale settings: LC_ALL=$LC_ALL, LANG=$LANG, LANGUAGE=$LANGUAGE, LC_CTYPE=$LC_CTYPE, TEXTDOMAINDIR=$TEXTDOMAINDIR, TEXTDOMAIN=$TEXTDOMAIN"
         
         ruyi update
         CHECK_RESULT $? 0 0 "Check ruyi update failed"
@@ -54,11 +54,24 @@ function run_test() {
         LOG_INFO "Testing installation without deb package downloaded..."
         ruyi_output=$(ruyi install --host x86_64 wps-office 2>&1)
 
-        # Use gettext to wrap matching strings
-        if echo "$ruyi_output" | grep -q "$(gettext "You need to download the package manually from the WPS Office download page:")"; then
+        # # Use gettext to wrap matching strings
+        # if echo "$ruyi_output" | grep -q "$(gettext "You need to download the package manually from the WPS Office download page:")"; then
+        #     LOG_INFO "Test passed: WPS Office deb package not found as expected for locale $locale."
+        # else
+        #     LOG_ERROR "Test failed: Expected 'deb package not found' message, but got different output."
+        #     LOG_INFO "Output: $ruyi_output"
+        #     exit 1
+        # fi
+
+        # Debug output to check gettext result
+        translated_msg=$(gettext "You need to download the package manually from the WPS Office download page:")
+        LOG_INFO "Translated message: $translated_msg"
+
+        if echo "$ruyi_output" | grep -q "$translated_msg"; then
             LOG_INFO "Test passed: WPS Office deb package not found as expected for locale $locale."
         else
             LOG_ERROR "Test failed: Expected 'deb package not found' message, but got different output."
+            LOG_INFO "Output: $ruyi_output"
             exit 1
         fi
 
