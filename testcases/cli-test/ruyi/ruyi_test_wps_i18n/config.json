@@ -1,0 +1,10 @@
+{
+    "locales": [
+      "zh_CN.UTF-8",
+      "en_US.UTF-8",
+      "en_SG.UTF-8"
+    ],
+    "download_url": "https://mirrors.163.com/ubuntukylin/pool/partner/wps-office_11.1.0.11720_amd64.deb",
+    "cache_dir": "${HOME}/.cache/ruyi/distfiles"
+  }
+  

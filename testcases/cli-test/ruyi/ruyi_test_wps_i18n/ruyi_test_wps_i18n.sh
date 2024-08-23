@@ -17,6 +17,7 @@
 # #############################################
 
 source "./common/common_lib.sh"
+source "./i18n/load_translations.sh"  # Load translation files
 
 WPS_DEB_URL="https://mirrors.163.com/ubuntukylin/pool/partner/wps-office_11.1.0.11720_amd64.deb"
 CACHE_DIR="${HOME}/.cache/ruyi/distfiles"
@@ -32,8 +33,11 @@ function pre_test() {
 function run_test() {
     LOG_INFO "Start to run test."
 
+    # Load different locales from configuration file
+    locales=$(jq -r '.locales[]' config.json)
+
     # Test with different locales
-    for locale in zh_CN.UTF-8 en_US.UTF-8 en_SG.UTF-8; do
+    for locale in $locales; do
         LOG_INFO "Testing with locale: $locale"
         
         export LC_ALL=$locale
@@ -48,7 +52,9 @@ function run_test() {
         # 1. Test install WPS Office using ruyi without the deb package downloaded
         LOG_INFO "Testing installation without deb package downloaded..."
         ruyi_output=$(ruyi install --host x86_64 wps-office 2>&1)
-        if echo "$ruyi_output" | grep -q "cannot be automatically fetched"; then
+
+        # Use gettext to wrap matching strings
+        if echo "$ruyi_output" | grep -q "$(gettext "You need to download the package manually from the WPS Office download page:")"; then
             LOG_INFO "Test passed: WPS Office deb package not found as expected for locale $locale."
         else
             LOG_ERROR "Test failed: Expected 'deb package not found' message, but got different output."
@@ -64,7 +70,7 @@ function run_test() {
 
         LOG_INFO "Testing installation after deb package downloaded..."
         ruyi_output=$(ruyi install --host x86_64 wps-office 2>&1)
-        if echo "$ruyi_output" | grep -q "installed to"; then
+        if echo "$ruyi_output" | grep -q "$(gettext "installed to")"; then
             LOG_INFO "Test passed: WPS Office successfully installed for locale $locale."
         else
             LOG_ERROR "Test failed: WPS Office installation failed after downloading the deb package for locale $locale."
@@ -74,7 +80,7 @@ function run_test() {
         # 3. Test installation when WPS Office is already installed
         LOG_INFO "Testing installation when WPS Office is already installed..."
         ruyi_output=$(ruyi install --host x86_64 wps-office 2>&1)
-        if echo "$ruyi_output" | grep -q "skipping already installed package"; then
+        if echo "$ruyi_output" | grep -q "$(gettext "skipping already installed package")"; then
             LOG_INFO "Test passed: WPS Office already installed for locale $locale."
         else
             LOG_ERROR "Test failed: Expected 'skipping already installed package' message, but got different output."
@@ -82,20 +88,19 @@ function run_test() {
         fi
         
 
-        LOG_INFO "remove WPS Office: $WPS_DEB_PATH, $RUYI_BINARY_CACHE"
+        LOG_INFO "Removing WPS Office: $WPS_DEB_PATH, $RUYI_BINARY_CACHE"
         rm -rf "$WPS_DEB_PATH"
         rm -rf "$RUYI_BINARY_CACHE"
 
-                LOG_INFO "Finished testing with locale: $locale"
+        LOG_INFO "Finished testing with locale: $locale"
 
     done
 
     LOG_INFO "End of the test."
 }
 
-
 function post_test() {
-    LOG_INFO "start environment cleanup."
+    LOG_INFO "Start environment cleanup."
     remove_ruyi
     LOG_INFO "Finish environment cleanup!"
 }
