@@ -16,7 +16,7 @@
 # @Desc      :   ruyisdk wps i18n test
 # #############################################
 
-source "./common/common_lib.sh"
+source "../common/common_lib.sh"
 source "./i18n/load_translations.sh"  # Load translation files
 
 WPS_DEB_URL="https://mirrors.163.com/ubuntukylin/pool/partner/wps-office_11.1.0.11720_amd64.deb"
