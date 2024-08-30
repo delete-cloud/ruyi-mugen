@@ -17,7 +17,7 @@
 # #############################################
 
 source "../common/common_lib.sh"
-source "./i18n/load_translations.sh"  # Load translation files
+# source "./i18n/load_translations.sh"  # Load translation files
 
 WPS_DEB_URL="https://mirrors.163.com/ubuntukylin/pool/partner/wps-office_11.1.0.11720_amd64.deb"
 CACHE_DIR="${HOME}/.cache/ruyi/distfiles"
@@ -44,8 +44,11 @@ function run_test() {
         export LANG=$locale
         export LANGUAGE=$locale
         export LC_CTYPE=$locale
+        export LC_MESSAGES=$locale
 
-        LOG_INFO "Current locale settings: LC_ALL=$LC_ALL, LANG=$LANG, LANGUAGE=$LANGUAGE, LC_CTYPE=$LC_CTYPE, TEXTDOMAINDIR=$TEXTDOMAINDIR, TEXTDOMAIN=$TEXTDOMAIN"
+        source "./i18n/load_translations.sh"  # Load translation files
+
+        LOG_INFO "Current locale settings: LC_ALL=$LC_ALL, LANG=$LANG, LANGUAGE=$LANGUAGE, LC_CTYPE=$LC_CTYPE, LC_MESSAGES=$LC_MESSAGES, TEXTDOMAINDIR=$TEXTDOMAINDIR, TEXTDOMAIN=$TEXTDOMAIN"
         
         ruyi update
         CHECK_RESULT $? 0 0 "Check ruyi update failed"
@@ -64,6 +67,7 @@ function run_test() {
         # fi
 
         # Debug output to check gettext result
+        LOG_INFO "Current locale settings: TEXTDOMAINDIR=$TEXTDOMAINDIR, TEXTDOMAIN=$TEXTDOMAIN"
         translated_msg=$(gettext "You need to download the package manually from the WPS Office download page:")
         LOG_INFO "Translated message: $translated_msg"
 

@@ -17,16 +17,17 @@
 # #############################################
 
 function load_translations() {
-    local lang=${LANGUAGE:-en_US.UTF-8}
-    local locale_dir=$(dirname "${BASH_SOURCE[0]}")/locales
+    local lang=${LANG}
+    local script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+    local locale_dir="${script_dir}/locales"
 
-    if [[ -f "${locale_dir}/${lang}/${lang}.mo" ]]; then
+    if [[ -f "${locale_dir}/${lang}/messages.mo" ]]; then
         export TEXTDOMAINDIR="${locale_dir}/${lang}"
         export TEXTDOMAIN=messages
     else
         export TEXTDOMAINDIR="${locale_dir}/en_US.UTF-8"
         export TEXTDOMAIN=messages
-    fi
+    fiÍ
 }
 
 load_translations
